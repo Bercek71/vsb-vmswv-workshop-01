@@ -35,8 +35,11 @@ describe("App basics", () => {
   it("does not display error message", () => {
     render(<App />);
 
+
+    expect(screen.queryByText("Kritická chyba!")).not.toBeInTheDocument();
     expect(
-      screen.queryByText("Kritická chyba!")
+      screen.queryByText("Toto je kritická chyba, oprav mne")
+
     ).not.toBeInTheDocument();
   })
 
