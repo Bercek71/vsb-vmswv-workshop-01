@@ -32,12 +32,16 @@ describe("App basics", () => {
     ).toBeInTheDocument();
   });
 
-  it("does not displays error alert", () => {
+  it("does not display error message", () => {
     render(<App />);
+
 
     expect(screen.queryByText("Kritická chyba!")).not.toBeInTheDocument();
     expect(
       screen.queryByText("Toto je kritická chyba, oprav mne")
+
     ).not.toBeInTheDocument();
-  });
+  })
+
+
 });
